@@ -21,13 +21,14 @@ npm install gilp-check-commit
 
 ```javascript
 var gulp = require('gulp');
-var gilpCheckCommit = require('gilp-check-commit');
+var gilpCommitMessage = require('gilp-commit-message');
+var gilp = require('gilp')(gulp);
 
-gulp.task('commit-msg', function () {
-  return gulp.src('**/*')
-    .pipe(gilpCheckCommit(/^(NA|[0-9]+)\:\s[A-Z0-9].*\.$/gm)
-    .pipe(gilpCheckCommit.failOnError());
-});
+gilp.hook('commit-msg', function () {
+  return gilp.srcFromStaged(['**/*'])
+    .pipe(gilpCommitMessage(/^(NA|[0-9]+)\:\s[A-Z0-9].*\.$/gm))
+    .pipe(gilpCommitMessage.failOnError())
+  });
 ```
 
 ## License
