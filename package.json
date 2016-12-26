@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/sophilabs/gilp-check-commit",
   "dependencies": {
-    "gulp-util": "^3.0.7",
+    "gilp-util": "^0.0.6",
     "through2": "^2.0.1"
   },
   "devDependencies": {
