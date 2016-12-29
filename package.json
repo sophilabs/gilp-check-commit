@@ -1,6 +1,6 @@
 {
   "name": "gilp-check-commit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Gilp plugin to validate commit messages.",
   "main": "lib/index.js",
   "directories": {
